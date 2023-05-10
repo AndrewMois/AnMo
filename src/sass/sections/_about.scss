@@ -11,6 +11,7 @@
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   padding-bottom: 10%;
+  position: relative;
 
   @include respond(tab-land) {
     height: 100%;
@@ -25,15 +26,35 @@
 
     &__image {
       display: flex;
+      position: absolute;
+      top: 0; /* position the img at the top of the section */
+  left: 0; /* position the img at the left of the section */
+  width: auto;
       height: 100%;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-end;
+      padding-left: 11%;
 
       @include respond(tab-land) {
         height: 100%;
+        padding-left: 10%;
       }
+
+      @include respond(tab-port) {
+        padding-left: 5%;
+      }
+
       @include respond(tab-port-sm) {
-        padding-bottom: 6.4rem;
+        // padding-bottom: 6.4rem;
+        position: inherit;
+        justify-content: center;
+        padding-left: 0%;
+        border: 1px solid white;
+      }
+      &_png{
+        width: 325px;
+        @include respond(tab-port-sm) {
+          width: 250px;
+        }
       }
     }
 
@@ -45,6 +66,7 @@
 
       @include respond(tab-port-sm) {
         align-items: center;
+         margin-top: 3rem;
       }
 
       &-text {
