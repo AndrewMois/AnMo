@@ -1,3 +1,9 @@
-node_modules/
+.DS_Store
+.astro/
+.vercel/
 dist/
-.parcel-cache
+node_modules/
+
+# Local-only working material and generated image experiments.
+references/private/
+tmp/
