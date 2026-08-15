@@ -2,7 +2,7 @@
 
 The future professional digital home of Andriy Moiseyenko, QA Automation Engineer.
 
-This branch intentionally contains no website implementation yet. The licensed Simplefolio template and its outdated content were removed before the new build so the portfolio can be designed and implemented from first principles.
+The licensed Simplefolio template and its outdated content were removed before the new build so the portfolio could be designed and implemented from first principles. The current branch contains the verified Astro foundation; full content, art direction, and motion remain intentionally staged.
 
 ## Canonical project documents
 
@@ -19,6 +19,16 @@ Read these before implementation:
 
 - Strategy and creative direction are approved.
 - The public role is `QA Automation Engineer`.
-- Astro is approved for the new implementation.
+- Astro 7, TypeScript, static output, formatting, type checks, and foundation unit tests are configured.
+- The generated page contains semantic static HTML and no client-side JavaScript.
 - The original portrait is preserved under `references/` for later art direction and optimization.
 - The existing public site and deployment remain untouched until a separately verified Preview is approved.
+
+## Local verification
+
+```bash
+npm install
+npm run lint
+npm test
+npm run build
+```

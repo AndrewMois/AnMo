@@ -26,3 +26,13 @@
 - Final production URLs and screenshot permissions for Guided by Scent and Alex Healing.
 - Analytics choice: none, privacy-friendly, or an explicitly consented solution.
 - Final typography after visual prototypes and performance comparison.
+
+## 2026-08-15 — Phase 1 foundation
+
+- Astro 7.2 and TypeScript 6 are pinned through the manifest and lockfile.
+- The site uses Astro's static output with no deployment adapter.
+- The initial semantic shell is intentionally server-rendered to plain HTML with zero client scripts.
+- Astro telemetry is disabled in project commands for reproducible local and CI runs.
+- Prettier with the official Astro plugin, `astro check`, and Vitest form the initial quality toolchain.
+- The canonical site URL is `https://anmo.dev`; production remains unchanged until the Preview gate.
+- A short synchronized downloadable resume will be created later because it serves forwarding, offline review, and recruiter workflows that the narrative site does not replace.

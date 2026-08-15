@@ -4,12 +4,23 @@ This plan begins after the documentation-and-cleanup commit. Work should proceed
 
 ## Phase 1 — Astro foundation
 
+**Status: complete on 2026-08-15 (`c6c3201` plus the following quality-gate commit).**
+
 - Initialize a current Astro project with TypeScript and static output.
 - Establish formatting, linting, type checks, and a minimal test structure.
 - Add semantic page shell, metadata system, local content model, and design-token foundation.
 - Keep dependencies deliberately small; do not add a UI kit or template.
 
 **Gate:** clean install, checks and production build pass; generated page works without client JavaScript.
+
+Verified at completion:
+
+- `npm run lint` passes with no Astro diagnostics;
+- foundation unit tests pass;
+- static production build passes;
+- built page contains no client scripts;
+- local browser QA passes at 1440, 390, and 360 CSS pixels with no page-level overflow;
+- semantic `header`, `nav`, `main`, labelled sections, footer, skip link, and visible keyboard focus are present.
 
 ## Phase 2 — Content architecture
 
