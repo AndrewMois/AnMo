@@ -32,7 +32,7 @@ Before changing the site, read all files in `docs/` in the order listed in `READ
 - Use custom design tokens and authored CSS; do not install a large UI kit or portfolio template.
 - Motion must have a narrative role, remain performant, and provide a complete `prefers-reduced-motion` experience.
 - Accessibility, semantic HTML, keyboard use, mobile composition, SEO, link health, and image performance are release requirements.
-- Do not deploy or change `anmo.dev` until a Preview has passed the verification gates in `docs/IMPLEMENTATION_PLAN.md` and Andriy explicitly approves the switch.
+- `anmo.dev` is the verified Netlify production site. Production changes still require Andriy's explicit approval and must be verified independently after deployment.
 
 ## Asset handling
 

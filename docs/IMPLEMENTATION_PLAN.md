@@ -1,6 +1,6 @@
 # Implementation plan
 
-This plan begins after the documentation-and-cleanup commit. Work should proceed in small reviewable stages. Do not deploy to production or change `anmo.dev` until the Preview gate is approved.
+This plan began after the documentation-and-cleanup commit. Work proceeded in small reviewable stages. Andriy's explicit production authorization on 2026-08-15 superseded the planned non-production Preview gate.
 
 ## Phase 1 — Astro foundation
 
@@ -124,6 +124,8 @@ Verified at completion:
 
 ## Phase 7 — Preview
 
+**Status: superseded on 2026-08-15 by explicit authorization to publish through the existing Netlify production pipeline.**
+
 - Configure the selected host and create a non-production Preview.
 - Verify metadata, social cards, favicon, canonical URL behavior, downloadable resume, and every external link.
 - Perform desktop and mobile browser QA on the real Preview, separate from local checks.
@@ -131,7 +133,11 @@ Verified at completion:
 
 **Gate:** explicit approval of the real Preview. A successful build or push is not deployment verification.
 
+No separate Preview was created. Local quality gates passed before the production push, and the resulting hosted deployment was then verified independently.
+
 ## Phase 8 — Production transition
+
+**Status: technical release complete on 2026-08-15 (`b0121e0` configures and successfully publishes the Netlify build); Andriy's visual review is the next feedback stage.**
 
 - Confirm rollback path to the archived template version.
 - Switch `anmo.dev` only after approval.
@@ -139,3 +145,12 @@ Verified at completion:
 - Update GitHub and LinkedIn positioning where approved so the professional identity is consistent.
 
 **Gate:** production is opened and verified independently on desktop and mobile; the old site remains recoverable from the archive tag.
+
+Verified at completion:
+
+- the canonical GitHub repository remains `AndrewMois/AnMo`; the legacy `simplefolio` name survives only in historical Netlify integration metadata;
+- Netlify builds `master` with Node 22.12, `npm run build`, and the `dist` publish directory declared in the repository;
+- `https://anmo.dev` serves the new Astro document over HTTPS with the expected canonical URL, social card, favicon, and downloadable PDF resume;
+- the hosted browser suite passes the same nine Chromium scenarios used locally, including mobile overflow, reduced motion, no-JavaScript reading, navigation, contact paths, and automated accessibility checks;
+- Andriy will perform the creative visual review on the live site and provide a separate correction list;
+- the old template remains recoverable through the `archive/pre-astro-template` tag.

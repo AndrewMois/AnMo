@@ -19,13 +19,11 @@
 - No deployment or domain change occurs during the documentation and cleanup stage.
 - The existing public `master` remains intact while the rebuild is prepared on `codex/astro-rebuild`.
 
-## Open decisions before launch
+## Open decisions after launch
 
-- Final synchronized downloadable resume.
-- Final LinkedIn URL and whether GitHub profile copy will be updated in the same release.
-- Final production URLs and screenshot permissions for Guided by Scent and Alex Healing.
+- Whether LinkedIn and GitHub profile copy will be updated in a later release.
+- Whether Guided by Scent will expose a live URL once its configured domain resolves.
 - Analytics choice: none, privacy-friendly, or an explicitly consented solution.
-- Final typography after visual prototypes and performance comparison.
 
 ## 2026-08-15 — Phase 1 foundation
 
@@ -80,3 +78,11 @@
 - It uses `QA Automation Engineer`, `amoiseyenko@ukr.net`, and the current public case hierarchy while retaining verified education, Reliability Status, languages, dates, and phone number from the source resume.
 - The editable DOCX is retained in `documents/`; the visually verified PDF is the only public download.
 - The social card uses the same Golden Precision hierarchy as the site and is supplied as a 1200 × 630 PNG with an SVG source.
+
+## 2026-08-15 — Netlify production release
+
+- Andriy explicitly authorized publishing the verified rebuild through the existing production pipeline instead of waiting for a separate Preview.
+- The canonical GitHub repository name remains `AndrewMois/AnMo`; `simplefolio` is treated only as a stale historical label in Netlify metadata.
+- Static Astro output needs no Netlify adapter. Repository-owned `netlify.toml` and `.node-version` define Node 22.12, `npm run build`, and `dist` so the build is reproducible outside old dashboard defaults.
+- The first production attempt failed under the inherited Netlify environment and left the old release intact. Commit `b0121e0` corrected the build configuration and reached `ready` before hosted verification began.
+- No analytics are included in the launch release. Adding analytics remains a separate privacy decision.
