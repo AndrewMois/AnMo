@@ -10,16 +10,16 @@ The visual identity should emerge from proportion, typography, material depth, p
 
 Working tokens, subject to contrast testing during implementation:
 
-| Role | Working color | Intent |
-| --- | --- | --- |
-| Warm ivory | `#F5F0E7` | Primary atmosphere |
-| Soft cream | `#EAE1D2` | Layered surfaces |
-| Graphite | `#171918` | Main text and structural authority |
-| Deep ink | `#102027` | Dark episodes and image framing |
-| Muted gold | `#B48A3C` | Control points and selected emphasis |
-| Burnished gold | `#8D6728` | Accessible darker gold state |
-| Cobalt | `#2457C5` | Rare technical charge |
-| Steel blue | `#728B99` | Secondary system information |
+| Role           | Working color | Intent                               |
+| -------------- | ------------- | ------------------------------------ |
+| Warm ivory     | `#F5F0E7`     | Primary atmosphere                   |
+| Soft cream     | `#EAE1D2`     | Layered surfaces                     |
+| Graphite       | `#171918`     | Main text and structural authority   |
+| Deep ink       | `#102027`     | Dark episodes and image framing      |
+| Muted gold     | `#B48A3C`     | Control points and selected emphasis |
+| Burnished gold | `#8D6728`     | Accessible darker gold state         |
+| Cobalt         | `#2457C5`     | Rare technical charge                |
+| Steel blue     | `#728B99`     | Secondary system information         |
 
 Gold must not carry long body copy. Cobalt should be surprising and scarce: a selected node, focus ring, or moment of system resolution, not a second dominant brand color.
 
