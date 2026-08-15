@@ -44,3 +44,11 @@
 - Technology names appear after the engineering responsibility and problem are established; the page does not use badges, logos, proficiency meters, or a keyword wall.
 - No confidential outcome metrics, defect counts, coverage percentages, or unconfirmed technologies are published.
 - The rendered content remains static HTML with zero client scripts.
+
+## 2026-08-15 — Phase 3 visual prototype
+
+- The visual prototype is implemented inside the real page rather than maintained as a disposable mockup.
+- The hero uses typography, proportion, negative space, a coordinate detail, and a single cobalt signal; it does not use a dashboard illustration or technology collage.
+- BluWave AI opens the case-study sequence as a deep-ink spatial episode; the remaining cases use warm material shifts to create rhythm without repeating card components.
+- The portrait is used as a wide photographic pause with responsive art direction. Generative identity alteration is not accepted for the published asset.
+- Public derivatives are produced from `references/portrait-source.JPG` and the original remains unchanged.

@@ -178,6 +178,33 @@ import { site } from '../data/site';
       </div>
     </section>
 
+    <figure class="portrait-episode">
+      <picture>
+        <source
+          type="image/avif"
+          srcset="/images/andriy-portrait-1280.avif 1280w, /images/andriy-portrait-1920.avif 1920w"
+          sizes="100vw"
+        />
+        <source
+          type="image/webp"
+          srcset="/images/andriy-portrait-1280.webp 1280w, /images/andriy-portrait-1920.webp 1920w"
+          sizes="100vw"
+        />
+        <img
+          src="/images/andriy-portrait-1920.jpg"
+          alt="Andriy Moiseyenko outdoors"
+          width="1920"
+          height="2879"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+      <figcaption>
+        <span>Outside the test plan</span>
+        <p>Curious about how things work. Serious about how they affect people.</p>
+      </figcaption>
+    </figure>
+
     <section class="about section-shell" id="about" aria-labelledby="about-title">
       <div>
         <p class="eyebrow">{content.about.eyebrow}</p>

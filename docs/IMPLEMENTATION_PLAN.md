@@ -45,12 +45,22 @@ Verified at completion:
 
 ## Phase 3 — Visual system prototypes
 
+**Status: complete on 2026-08-15 (integrated prototype commit follows Phase 2).**
+
 - Prototype Golden Precision tokens, type scale, grid, surfaces, focus states, and the inspection spine.
 - Produce one desktop hero, one mobile hero, one professional case-study chapter, and one photographic episode before building the full page.
 - Evaluate the portrait crop and tonal treatment while preserving the source.
 - Check that gold reads as precision rather than luxury cliché and cobalt remains a rare charge.
 
 **Gate:** the selected prototype feels distinctly personal and does not resemble a template or employer website.
+
+Verified at completion:
+
+- Golden Precision is expressed through warm ivory, deep ink, restrained gold, steel blue, and one rare cobalt signal rather than decorative luxury motifs;
+- desktop and mobile hero compositions, the dark professional-case episode, responsive information structures, and the photographic pause are implemented in real page context;
+- the supplied portrait remains photographically authentic; a generative tonal experiment was rejected, and responsive AVIF/WebP/JPEG derivatives were made from the untouched source instead;
+- desktop and 390-pixel mobile browser inspection confirms the selected portrait crops, readable overlays, responsive source selection, and no horizontal overflow;
+- the prototype remains static and respects reduced-motion preferences before any motion layer is added.
 
 ## Phase 4 — Page composition
 

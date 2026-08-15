@@ -473,6 +473,71 @@ h3 {
   font-size: 0.78rem;
 }
 
+.portrait-episode {
+  position: relative;
+  width: min(calc(100% - 2 * var(--page-padding)), var(--content-width));
+  margin: 0 auto var(--section-space);
+  overflow: hidden;
+  background: var(--color-ink);
+  color: var(--color-ivory);
+  isolation: isolate;
+}
+
+.portrait-episode::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgb(16 32 39 / 78%) 0%,
+    rgb(16 32 39 / 20%) 48%,
+    transparent 72%
+  );
+  content: '';
+  pointer-events: none;
+}
+
+.portrait-episode picture,
+.portrait-episode img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.portrait-episode picture {
+  aspect-ratio: 16 / 9;
+}
+
+.portrait-episode img {
+  object-fit: cover;
+  object-position: 50% 49%;
+  filter: saturate(0.82) contrast(1.03);
+}
+
+.portrait-episode figcaption {
+  position: absolute;
+  z-index: 2;
+  bottom: clamp(1.5rem, 5vw, 4rem);
+  left: clamp(1.5rem, 5vw, 4rem);
+  max-width: 31rem;
+}
+
+.portrait-episode figcaption span {
+  color: #d7b66e;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.portrait-episode figcaption p {
+  margin: 1rem 0 0;
+  font-size: clamp(1.7rem, 4vw, 3.8rem);
+  font-weight: 520;
+  letter-spacing: -0.045em;
+  line-height: 1.03;
+}
+
 .about {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.8fr);
@@ -607,6 +672,22 @@ h3 {
   .capability-list article {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+  }
+
+  .portrait-episode {
+    width: 100%;
+  }
+
+  .portrait-episode picture {
+    aspect-ratio: 4 / 5;
+  }
+
+  .portrait-episode img {
+    object-position: 50% 55%;
+  }
+
+  .portrait-episode::after {
+    background: linear-gradient(0deg, rgb(16 32 39 / 88%) 0%, rgb(16 32 39 / 8%) 64%);
   }
 
   .footer-meta {
