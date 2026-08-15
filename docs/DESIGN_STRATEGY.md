@@ -19,7 +19,7 @@ Working tokens, subject to contrast testing during implementation:
 | Muted gold     | `#B48A3C`     | Control points and selected emphasis |
 | Burnished gold | `#8D6728`     | Accessible darker gold state         |
 | Cobalt         | `#2457C5`     | Rare technical charge                |
-| Steel blue     | `#728B99`     | Secondary system information         |
+| Steel blue     | `#506A78`     | Accessible secondary system detail   |
 
 Gold must not carry long body copy. Cobalt should be surprising and scarce: a selected node, focus ring, or moment of system resolution, not a second dominant brand color.
 

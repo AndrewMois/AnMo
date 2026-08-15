@@ -3,6 +3,8 @@
 .vercel/
 dist/
 node_modules/
+playwright-report/
+test-results/
 
 # Local-only working material and generated image experiments.
 references/private/

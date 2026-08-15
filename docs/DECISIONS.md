@@ -66,3 +66,10 @@
 - The inspection spine communicates document progress on larger screens; hiding it on mobile is an art-direction decision rather than a missing feature.
 - Section reveals run once and then disconnect, using transform and opacity only.
 - Reduced-motion preference wins over every decorative transition, including smooth anchor scrolling.
+
+## 2026-08-15 — Phase 6 quality engineering
+
+- Playwright with Chromium is the reproducible browser gate; the in-app browser remains useful for creative visual inspection but does not replace the committed suite.
+- axe-core runs inside the browser suite and blocks serious or critical automated accessibility findings.
+- A small repository-owned build checker is preferred over an opaque link-checking dependency because it can enforce local anchors, generated assets, unsafe schemes, and transfer budgets together.
+- Hosted Web Vitals are Preview gates rather than locally claimed results.

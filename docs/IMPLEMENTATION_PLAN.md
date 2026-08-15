@@ -104,12 +104,23 @@ Verified at completion:
 
 ## Phase 6 — Quality engineering
 
+**Status: complete on 2026-08-15 (quality-gate and CI commit follows Phase 5).**
+
 - Add Playwright coverage for primary navigation, project links, resume/contact paths, keyboard behavior, mobile overflow, and reduced motion.
 - Add automated link checking and accessibility scanning.
 - Establish budgets for JavaScript, image weight, LCP/CLS/INP, and total page transfer.
 - Verify semantic landmarks, heading order, alt text, focus visibility, color contrast, and no-JavaScript reading.
 
 **Gate:** checks, production build, browser tests, and accessibility review pass with no known critical issue.
+
+Verified at completion:
+
+- Playwright covers the complete narrative, navigation targets, contact and project paths, 360/390/430/768 overflow, reduced motion, and no-JavaScript reading;
+- axe-core reports no serious or critical automated accessibility violations;
+- the build checker validates internal anchors, built image sources, unsafe schemes, HTML size, image weight, client-script count, and JavaScript size;
+- documented hosted targets are LCP `≤ 2.5 s`, CLS `≤ 0.10`, and INP `≤ 200 ms`;
+- all nine Chromium scenarios, eight unit tests, formatting, Astro diagnostics, build checks, and the production build pass;
+- GitHub Actions now reproduces the complete quality gate on the rebuild branch, pull requests, and `master`.
 
 ## Phase 7 — Preview
 

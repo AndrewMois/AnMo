@@ -31,4 +31,11 @@ npm install
 npm run lint
 npm test
 npm run build
+npm run test:links
+npm run test:e2e
+npm run quality
 ```
+
+`npm run test:e2e` requires the Playwright Chromium runtime. Install it once with `npx playwright install chromium` on a new machine; CI installs it automatically.
+
+The enforced performance and accessibility thresholds are recorded in [`docs/QUALITY_BUDGETS.md`](docs/QUALITY_BUDGETS.md).
