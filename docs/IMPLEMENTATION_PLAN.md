@@ -24,6 +24,8 @@ Verified at completion:
 
 ## Phase 2 — Content architecture
 
+**Status: complete on 2026-08-15 (`2cdbd5a` plus the following page-composition commit).**
+
 - Convert approved facts into typed project and experience data.
 - Draft the English page copy in full.
 - Resolve confidentiality-safe wording for BluWave AI and CRA.
@@ -31,6 +33,15 @@ Verified at completion:
 - Prepare a synchronized downloadable resume or pause its public link until the file is approved.
 
 **Gate:** every public claim maps to an approved source; no placeholders or invented metrics remain.
+
+Verified at completion:
+
+- approved professional and product claims are centralized in a typed content model with regression tests;
+- the three-level case hierarchy is rendered as semantic static HTML;
+- excluded legacy projects and the `Senior` public title have automated guardrails;
+- the synchronized one-page resume is explicitly deferred until its own document-production phase and no stale PDF is linked;
+- formatting, Astro diagnostics, unit tests, and the production build pass;
+- local browser QA passes at desktop and 390 CSS pixels with no page-level overflow and zero client scripts.
 
 ## Phase 3 — Visual system prototypes
 

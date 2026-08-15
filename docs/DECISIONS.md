@@ -36,3 +36,11 @@
 - Prettier with the official Astro plugin, `astro check`, and Vitest form the initial quality toolchain.
 - The canonical site URL is `https://anmo.dev`; production remains unchanged until the Preview gate.
 - A short synchronized downloadable resume will be created later because it serves forwarding, offline review, and recruiter workflows that the narrative site does not replace.
+
+## 2026-08-15 — Phase 2 content architecture
+
+- The full English narrative lives in typed local data rather than page-level fragments or a CMS.
+- Primary evidence hierarchy: BluWave AI and Canada Revenue Agency as professional cases, Young Mystic as the primary product-ownership case, and Guided by Scent plus Alex Healing as quieter supporting builds.
+- Technology names appear after the engineering responsibility and problem are established; the page does not use badges, logos, proficiency meters, or a keyword wall.
+- No confidential outcome metrics, defect counts, coverage percentages, or unconfirmed technologies are published.
+- The rendered content remains static HTML with zero client scripts.

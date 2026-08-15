@@ -22,13 +22,13 @@ Working supporting direction:
 
 > I build quality systems for products that need to be understood beyond the interface — across devices, APIs, backend behaviour, data flows, and ML-driven decisions.
 
-These are directional, not final locked sentences. Final copy will be refined in context with the visual composition.
+These sentences are now the approved Phase 2 foundation. Later refinements must preserve their quiet, systems-level positioning.
 
 ## Page narrative
 
 ### 1. Hero
 
-Establish role, systems-level perspective, and a fast path to selected work and resume. Do not open with a biography or a tool list.
+Establish role, systems-level perspective, and a fast path to selected work and contact. Do not open with a biography or a tool list. The resume link appears only after the synchronized file exists.
 
 ### 2. Proof field
 
@@ -136,4 +136,4 @@ The supplied resume is a strong factual source but currently conflicts with appr
 - it uses `Senior Software Developer in Test` while the site decision is `QA Automation Engineer`;
 - it uses a different email from the approved `amoiseyenko@ukr.net`.
 
-Before publication, create or receive a synchronized final PDF, visually inspect every page, and then place only that final version in the public site.
+The site remains the primary narrative artifact. A compact one-page resume will still be created for forwarding, offline review, and recruiter workflows. It should retain concise experience, education, and clearance information while synchronizing the public title and email. Visually inspect the final page before placing only that approved version on the public site.

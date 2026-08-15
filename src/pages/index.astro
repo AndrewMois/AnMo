@@ -1,14 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { content } from '../data/content';
 import { site } from '../data/site';
-
-const proofAreas = [
-  'Automation architecture',
-  'APIs and backend behaviour',
-  'AI/ML system validation',
-  'Performance and reliability',
-  'Product development'
-];
 ---
 
 <BaseLayout>
@@ -33,61 +26,175 @@ const proofAreas = [
 
   <main id="main-content">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <p class="eyebrow">Quality engineering · Ottawa, Canada</p>
-      <h1 id="hero-title">
-        QA Automation Engineer <span>with a developer's perspective.</span>
-      </h1>
-      <p class="hero-summary">
-        I build quality systems for products that need to be understood beyond the interface —
-        across devices, APIs, backend behaviour, data flows, and ML-driven decisions.
-      </p>
-      <div class="hero-actions" aria-label="Introduction links">
-        <a class="primary-action" href="#work">View selected work</a>
-        <a href={`mailto:${site.email}`}>Start a conversation</a>
+      <div class="hero-copy">
+        <p class="eyebrow">{content.hero.eyebrow}</p>
+        <h1 id="hero-title">
+          {content.hero.title}
+          <span>{content.hero.titleContinuation}</span>
+        </h1>
+        <p class="hero-summary">{content.hero.summary}</p>
+        <div class="hero-actions" aria-label="Introduction links">
+          <a class="primary-action" href="#work">{content.hero.primaryAction}</a>
+          <a href={`mailto:${site.email}`}>{content.hero.secondaryAction}</a>
+        </div>
       </div>
+      <p class="hero-coordinate" aria-hidden="true">45.4215° N · 75.6972° W</p>
     </section>
 
     <section class="proof" aria-label="Areas of practice">
-      <ul>
+      <ol>
         {
-          proofAreas.map((area, index) => (
+          content.proofAreas.map((area) => (
             <li>
-              <span>0{index + 1}</span>
-              {area}
+              <span>{area.index}</span>
+              <strong>{area.label}</strong>
+              <p>{area.detail}</p>
             </li>
           ))
         }
-      </ul>
+      </ol>
     </section>
 
-    <section class="foundation-section" id="approach" aria-labelledby="approach-title">
-      <p class="eyebrow">The system beneath the surface</p>
-      <h2 id="approach-title">Understand. Locate risk. Apply pressure. Create evidence.</h2>
-      <p>
-        This foundation intentionally ships as semantic, static HTML. The complete quality
-        narrative, case studies, visual system, and motion will be developed in their approved
-        phases.
-      </p>
+    <section class="approach section-shell" id="approach" aria-labelledby="approach-title">
+      <div class="section-introduction">
+        <p class="eyebrow">{content.approach.eyebrow}</p>
+        <h2 id="approach-title">{content.approach.title}</h2>
+        <p>{content.approach.introduction}</p>
+      </div>
+      <ol class="approach-steps">
+        {
+          content.approach.steps.map((step) => (
+            <li>
+              <span>{step.index}</span>
+              <div>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
     </section>
 
-    <section class="foundation-section" id="work" aria-labelledby="work-title">
-      <p class="eyebrow">Selected work</p>
-      <h2 id="work-title">Professional systems and products, presented with depth.</h2>
-      <p>
-        BluWave AI, Canada Revenue Agency, Young Mystic, Guided by Scent, and Alex Healing form the
-        approved evidence set. No student-era project gallery will return.
-      </p>
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="work-heading section-shell">
+        <p class="eyebrow">Selected work</p>
+        <h2 id="work-title">Systems understood in depth.</h2>
+      </div>
+
+      <div class="case-studies">
+        {
+          content.caseStudies.map((study, index) => (
+            <article class:list={['case-study', { 'case-study-dark': index === 0 }]}>
+              <header class="case-header">
+                <div>
+                  <p class="case-index">Case {String(index + 1).padStart(2, '0')}</p>
+                  <p class="case-kind">{study.kind}</p>
+                </div>
+                <p class="case-organization">{study.organization}</p>
+              </header>
+              <div class="case-lede">
+                <h3>{study.title}</h3>
+                <p>{study.introduction}</p>
+              </div>
+              <div class="case-body">
+                <div>
+                  <p class="case-label">Context</p>
+                  <p>{study.context}</p>
+                </div>
+                <div>
+                  <p class="case-label">Response</p>
+                  <ul class="response-list">
+                    {study.response.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <footer class="case-evidence">
+                <p class="case-label">Demonstrates</p>
+                <ul>
+                  {study.demonstrates.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </footer>
+            </article>
+          ))
+        }
+      </div>
     </section>
 
-    <section class="foundation-section" id="about" aria-labelledby="about-title">
-      <p class="eyebrow">About</p>
-      <h2 id="about-title">I test systems deeply because I know how to build them.</h2>
+    <section class="perspective section-shell" aria-labelledby="perspective-title">
+      <p class="eyebrow">{content.developerPerspective.eyebrow}</p>
+      <div>
+        <h2 id="perspective-title">{content.developerPerspective.title}</h2>
+        <div class="perspective-copy">
+          {content.developerPerspective.body.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="supporting-builds section-shell" aria-labelledby="builds-title">
+      <div class="section-introduction compact">
+        <p class="eyebrow">Selected builds</p>
+        <h2 id="builds-title">Products are part of the evidence.</h2>
+      </div>
+      <div class="build-list">
+        {
+          content.supportingBuilds.map((build, index) => (
+            <article>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <h3>{build.title}</h3>
+                <p>{build.description}</p>
+                <p class="build-evidence">{build.evidence}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="capabilities section-shell" aria-labelledby="capabilities-title">
+      <div class="section-introduction compact">
+        <p class="eyebrow">Working range</p>
+        <h2 id="capabilities-title">Tools in service of judgement.</h2>
+      </div>
+      <div class="capability-list">
+        {
+          content.capabilityGroups.map((group) => (
+            <article>
+              <h3>{group.title}</h3>
+              <p>{group.statement}</p>
+              <ul>
+                {group.evidence.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="about section-shell" id="about" aria-labelledby="about-title">
+      <div>
+        <p class="eyebrow">{content.about.eyebrow}</p>
+        <h2 id="about-title">{content.about.title}</h2>
+      </div>
+      <div class="about-copy">{content.about.body.map((paragraph) => <p>{paragraph}</p>)}</div>
     </section>
   </main>
 
-  <footer id="contact">
-    <p>Have a complex system worth understanding?</p>
+  <footer class="site-footer" id="contact">
+    <p class="eyebrow">{content.contact.eyebrow}</p>
+    <h2>{content.contact.title}</h2>
+    <p>{content.contact.body}</p>
     <a href={`mailto:${site.email}`}>{site.email}</a>
-    <p>© {new Date().getFullYear()} {site.name}</p>
+    <div class="footer-meta">
+      <span>© {new Date().getFullYear()} {site.name}</span>
+      <span>Ottawa, Canada</span>
+    </div>
   </footer>
 </BaseLayout>
