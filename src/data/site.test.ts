@@ -6,6 +6,7 @@ describe('site identity', () => {
   it('uses the approved public positioning', () => {
     expect(site.role).toBe('QA Automation Engineer');
     expect(site.email).toBe('amoiseyenko@ukr.net');
+    expect(site.resumeUrl).toBe('/resume/Andriy-Moiseyenko-Resume.pdf');
     expect(site.url).toBe('https://anmo.dev');
   });
 

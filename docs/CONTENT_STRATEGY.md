@@ -136,4 +136,4 @@ The supplied resume is a strong factual source but currently conflicts with appr
 - it uses `Senior Software Developer in Test` while the site decision is `QA Automation Engineer`;
 - it uses a different email from the approved `amoiseyenko@ukr.net`.
 
-The site remains the primary narrative artifact. A compact one-page resume will still be created for forwarding, offline review, and recruiter workflows. It should retain concise experience, education, and clearance information while synchronizing the public title and email. Visually inspect the final page before placing only that approved version on the public site.
+The site remains the primary narrative artifact. A compact one-page resume serves forwarding, offline review, and recruiter workflows. It retains concise experience, education, and clearance information while synchronizing the public title and email. The final DOCX has been rendered and visually inspected as one clean page; only its synchronized PDF derivative is linked publicly.

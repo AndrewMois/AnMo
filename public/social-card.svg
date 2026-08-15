@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Andriy Moiseyenko — QA Automation Engineer</title>
+  <desc id="description">Warm ivory social card with graphite typography, a restrained gold label, and a cobalt system signal.</desc>
+  <rect width="1200" height="630" fill="#f5f0e7" />
+  <path d="M72 72H1128" stroke="#171918" stroke-opacity=".2" />
+  <path d="M72 558H1128" stroke="#171918" stroke-opacity=".2" />
+  <path d="M72 72V558" stroke="#171918" stroke-opacity=".12" />
+  <path d="M72 408H386" stroke="#2457c5" stroke-width="3" />
+  <text x="72" y="126" fill="#76531e" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">QUALITY ENGINEERING · OTTAWA, CANADA</text>
+  <text x="72" y="236" fill="#171918" font-family="Arial, sans-serif" font-size="78" font-weight="700" letter-spacing="-4">QA Automation Engineer</text>
+  <text x="72" y="324" fill="#506a78" font-family="Arial, sans-serif" font-size="64" font-weight="400" letter-spacing="-3">with a developer’s perspective.</text>
+  <text x="72" y="478" fill="#171918" font-family="Arial, sans-serif" font-size="28" font-weight="700">Andriy Moiseyenko</text>
+  <text x="1128" y="478" fill="#76531e" font-family="Arial, sans-serif" font-size="18" text-anchor="end" letter-spacing="2">ANMO.DEV</text>
+</svg>

@@ -6,6 +6,10 @@ test.describe('portfolio experience', () => {
     await page.goto('/');
 
     await expect(page).toHaveTitle('Andriy Moiseyenko — QA Automation Engineer');
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+      'content',
+      'https://anmo.dev/social-card.png'
+    );
     await expect(page.getByRole('heading', { level: 1 })).toContainText('QA Automation Engineer');
     await expect(page.locator('.case-study')).toHaveCount(3);
 
@@ -22,6 +26,7 @@ test.describe('portfolio experience', () => {
     await page.goto('/');
 
     await expect(page.locator('a[href="mailto:amoiseyenko@ukr.net"]')).toHaveCount(2);
+    await expect(page.locator('a[href="/resume/Andriy-Moiseyenko-Resume.pdf"]')).toHaveCount(2);
 
     const externalLinks = page.locator('a[target="_blank"]');
     await expect(externalLinks).toHaveCount(6);

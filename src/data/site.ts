@@ -7,6 +7,7 @@ export const site = {
   name: 'Andriy Moiseyenko',
   role: 'QA Automation Engineer',
   email: 'amoiseyenko@ukr.net',
+  resumeUrl: '/resume/Andriy-Moiseyenko-Resume.pdf',
   url: 'https://anmo.dev',
   title: 'Andriy Moiseyenko — QA Automation Engineer',
   description:

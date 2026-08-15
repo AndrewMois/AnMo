@@ -20,6 +20,13 @@ const sources = [...html.matchAll(/\s(?:src|srcset)="([^"]+)"/g)]
 for (const href of hrefs) {
   if (href.startsWith('#')) assert(ids.has(href.slice(1)), `Missing anchor target: ${href}`);
   if (/^(javascript|data):/i.test(href)) failures.push(`Unsafe link scheme: ${href}`);
+  if (href.startsWith('/')) {
+    try {
+      await access(path.join(dist, href));
+    } catch {
+      failures.push(`Missing linked file: ${href}`);
+    }
+  }
 }
 
 for (const source of sources) {

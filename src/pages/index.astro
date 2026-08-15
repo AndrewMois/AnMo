@@ -37,6 +37,7 @@ import { site } from '../data/site';
         <div class="hero-actions" aria-label="Introduction links">
           <a class="primary-action" href="#work">{content.hero.primaryAction}</a>
           <a href={`mailto:${site.email}`}>{content.hero.secondaryAction}</a>
+          <a href={site.resumeUrl} download>Download resume ↓</a>
         </div>
       </div>
       <p class="hero-coordinate" aria-hidden="true">45.4215° N · 75.6972° W</p>
@@ -238,6 +239,7 @@ import { site } from '../data/site';
     <a href={`mailto:${site.email}`}>{site.email}</a>
     <nav class="footer-links" aria-label="Professional profiles">
       <ul>
+        <li><a href={site.resumeUrl} download>Resume PDF ↓</a></li>
         {
           site.socialLinks.map((link) => (
             <li>

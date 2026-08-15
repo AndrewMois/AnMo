@@ -73,3 +73,10 @@
 - axe-core runs inside the browser suite and blocks serious or critical automated accessibility findings.
 - A small repository-owned build checker is preferred over an opaque link-checking dependency because it can enforce local anchors, generated assets, unsafe schemes, and transfer budgets together.
 - Hosted Web Vitals are Preview gates rather than locally claimed results.
+
+## 2026-08-15 — Resume and social-preview assets
+
+- The downloadable resume is a synchronized one-page companion to the narrative site, not a copy of it.
+- It uses `QA Automation Engineer`, `amoiseyenko@ukr.net`, and the current public case hierarchy while retaining verified education, Reliability Status, languages, dates, and phone number from the source resume.
+- The editable DOCX is retained in `documents/`; the visually verified PDF is the only public download.
+- The social card uses the same Golden Precision hierarchy as the site and is supplied as a 1200 × 630 PNG with an SVG source.
