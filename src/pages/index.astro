@@ -118,6 +118,15 @@ import { site } from '../data/site';
                     <li>{item}</li>
                   ))}
                 </ul>
+                {study.links && (
+                  <div class="project-links">
+                    {study.links.map((link) => (
+                      <a href={link.href} target="_blank" rel="noreferrer">
+                        {link.label} ↗
+                      </a>
+                    ))}
+                  </div>
+                )}
               </footer>
             </article>
           ))
@@ -149,6 +158,13 @@ import { site } from '../data/site';
                 <h3>{build.title}</h3>
                 <p>{build.description}</p>
                 <p class="build-evidence">{build.evidence}</p>
+                <div class="project-links">
+                  {build.links.map((link) => (
+                    <a href={link.href} target="_blank" rel="noreferrer">
+                      {link.label} ↗
+                    </a>
+                  ))}
+                </div>
               </div>
             </article>
           ))
@@ -219,6 +235,19 @@ import { site } from '../data/site';
     <h2>{content.contact.title}</h2>
     <p>{content.contact.body}</p>
     <a href={`mailto:${site.email}`}>{site.email}</a>
+    <nav class="footer-links" aria-label="Professional profiles">
+      <ul>
+        {
+          site.socialLinks.map((link) => (
+            <li>
+              <a href={link.href} target="_blank" rel="noreferrer">
+                {link.label} ↗
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
     <div class="footer-meta">
       <span>© {new Date().getFullYear()} {site.name}</span>
       <span>Ottawa, Canada</span>

@@ -401,6 +401,17 @@ h3 {
   font-size: 0.86rem;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.project-links a {
+  font-weight: 650;
+}
+
 .perspective {
   display: grid;
   grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1.65fr);
@@ -446,6 +457,11 @@ h3 {
 .build-evidence {
   margin-bottom: 0;
   color: color-mix(in srgb, var(--color-graphite) 68%, transparent);
+  font-size: 0.9rem;
+}
+
+.build-list .project-links {
+  margin-top: 1rem;
   font-size: 0.9rem;
 }
 
@@ -575,6 +591,20 @@ h3 {
   width: fit-content;
   margin-top: 2.5rem;
   font-size: clamp(1.55rem, 4vw, 3.5rem);
+  font-weight: 650;
+}
+
+.footer-links {
+  width: fit-content;
+  margin-top: 2rem;
+  overflow: visible;
+}
+
+.footer-links ul {
+  gap: 1.5rem;
+}
+
+.footer-links a {
   font-weight: 650;
 }
 

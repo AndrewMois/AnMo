@@ -45,4 +45,19 @@ describe('portfolio content', () => {
 
     expect(new Set(ids).size).toBe(ids.length);
   });
+
+  it('publishes only confirmed HTTPS project links', () => {
+    const links: Array<{ label: string; href: string }> = [];
+
+    for (const study of content.caseStudies) {
+      if ('links' in study && study.links) links.push(...study.links);
+    }
+
+    for (const build of content.supportingBuilds) links.push(...build.links);
+
+    expect(links.length).toBeGreaterThan(0);
+    expect(links.every((link) => link.href.startsWith('https://'))).toBe(true);
+    expect(links.some((link) => link.href.includes('demo.young-mystic.com'))).toBe(false);
+    expect(links.some((link) => link.href.includes('guidedbyscent.ca'))).toBe(false);
+  });
 });

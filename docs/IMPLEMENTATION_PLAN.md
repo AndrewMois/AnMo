@@ -64,12 +64,23 @@ Verified at completion:
 
 ## Phase 4 — Page composition
 
+**Status: complete on 2026-08-15 (composition and link-validation commits follow Phase 3).**
+
 - Build navigation, hero, proof field, quality approach, case studies, developer perspective, personal close, and contact.
 - Implement responsive art direction rather than shrinking desktop layouts.
 - Add meaningful project imagery or custom diagrams only where they strengthen evidence.
 - Optimize all responsive images and social-preview assets.
 
 **Gate:** complete content is readable, coherent, and visually strong at 360, 390/430, 768, and desktop widths before motion is added.
+
+Verified at completion:
+
+- navigation, hero, proof field, approach, three deep case studies, developer perspective, supporting builds, working range, portrait, about, and contact form one semantic page narrative;
+- the desktop layout is recomposed into single-column sequences on mobile instead of being uniformly scaled down;
+- portrait sources are responsive, explicitly sized, lazy-loaded, and available as AVIF, WebP, and JPEG;
+- project links are restricted to confirmed HTTPS destinations; the retired Young Mystic demo and unresolved Guided by Scent domain are intentionally not published;
+- local browser checks pass at 360, 390, 430, 768, and 1280 CSS pixels with no page-level overflow, all internal anchors resolved, and all external links protected with `noreferrer`;
+- the complete page still ships zero client scripts.
 
 ## Phase 5 — Motion and interaction
 

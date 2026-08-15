@@ -52,3 +52,10 @@
 - BluWave AI opens the case-study sequence as a deep-ink spatial episode; the remaining cases use warm material shifts to create rhythm without repeating card components.
 - The portrait is used as a wide photographic pause with responsive art direction. Generative identity alteration is not accepted for the published asset.
 - Public derivatives are produced from `references/portrait-source.JPG` and the original remains unchanged.
+
+## 2026-08-15 — Phase 4 page composition
+
+- Young Mystic and Guided by Scent link to their confirmed GitHub repositories for now. The former demo URL returns a deployment-not-found response and the latter configured domain does not currently resolve, so neither is exposed as a live link.
+- Alex Healing links to both the verified live site and its GitHub repository.
+- LinkedIn and GitHub are restored as restrained professional-profile links in the contact close; Facebook remains excluded.
+- Professional employers are described as evidence chapters without promotional outbound employer links.

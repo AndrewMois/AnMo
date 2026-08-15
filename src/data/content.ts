@@ -19,6 +19,7 @@ export type CaseStudy = {
   context: string;
   response: readonly string[];
   demonstrates: readonly string[];
+  links?: readonly { label: string; href: `https://${string}` }[];
 };
 
 export type SupportingBuild = {
@@ -26,6 +27,7 @@ export type SupportingBuild = {
   title: string;
   description: string;
   evidence: string;
+  links: readonly { label: string; href: `https://${string}` }[];
 };
 
 export type CapabilityGroup = {
@@ -171,7 +173,8 @@ export const content = {
         'Authentication and data boundaries',
         'PWA reliability',
         'Long-term ownership'
-      ]
+      ],
+      links: [{ label: 'View source', href: 'https://github.com/AndrewMois/young-mystic' }]
     }
   ] satisfies CaseStudy[],
   developerPerspective: {
@@ -189,7 +192,8 @@ export const content = {
       description:
         'A calm mobile-first digital home built with SvelteKit and Sanity, replacing a long service page with a clear route-based product experience.',
       evidence:
-        'Content modelling, responsive art direction, resilient CMS fallbacks, route transitions, and browser verification across WebKit and Chromium.'
+        'Content modelling, responsive art direction, resilient CMS fallbacks, route transitions, and browser verification across WebKit and Chromium.',
+      links: [{ label: 'View source', href: 'https://github.com/AndrewMois/anna-home' }]
     },
     {
       id: 'alex-healing',
@@ -197,7 +201,11 @@ export const content = {
       description:
         'A social-first personal platform with a universal content architecture and a deliberately simple Russian-language editing experience.',
       evidence:
-        'SvelteKit, Sanity, backward-compatible content modelling, mobile atmosphere, and touch behaviour refined without destabilizing layout geometry.'
+        'SvelteKit, Sanity, backward-compatible content modelling, mobile atmosphere, and touch behaviour refined without destabilizing layout geometry.',
+      links: [
+        { label: 'Visit live site', href: 'https://alexhealing.com' },
+        { label: 'View source', href: 'https://github.com/AndrewMois/AlexHealing' }
+      ]
     }
   ] satisfies SupportingBuild[],
   capabilityGroups: [
