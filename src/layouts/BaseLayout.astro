@@ -35,6 +35,64 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <title>{title}</title>
   </head>
   <body>
+    <script is:inline>
+      (() => {
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        if (reducedMotion.matches) return;
+
+        const startMotion = () => {
+          const root = document.documentElement;
+          const targets = document.querySelectorAll(
+            '.hero-copy > *, .proof li, .section-introduction > *, .approach-steps li, .case-header, .case-lede > *, .case-body > *, .case-evidence, .perspective > *, .build-list article, .capability-list article, .portrait-episode, .about > *, .site-footer > *'
+          );
+
+          root.classList.add('motion-ready');
+          targets.forEach((target, index) => {
+            target.classList.add('reveal');
+            target.style.setProperty('--reveal-order', String(index % 5));
+          });
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              });
+            },
+            { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }
+          );
+
+          targets.forEach((target) => observer.observe(target));
+
+          let scheduled = false;
+          const updateProgress = () => {
+            const range = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = range > 0 ? Math.min(window.scrollY / range, 1) : 0;
+            root.style.setProperty('--page-progress', String(progress));
+            scheduled = false;
+          };
+
+          window.addEventListener(
+            'scroll',
+            () => {
+              if (scheduled) return;
+              scheduled = true;
+              window.requestAnimationFrame(updateProgress);
+            },
+            { passive: true }
+          );
+          updateProgress();
+        };
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', startMotion, { once: true });
+        } else {
+          startMotion();
+        }
+      })();
+    </script>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <slot />
   </body>

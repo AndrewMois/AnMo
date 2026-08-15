@@ -59,3 +59,10 @@
 - Alex Healing links to both the verified live site and its GitHub repository.
 - LinkedIn and GitHub are restored as restrained professional-profile links in the contact close; Facebook remains excluded.
 - Professional employers are described as evidence chapters without promotional outbound employer links.
+
+## 2026-08-15 — Phase 5 motion and interaction
+
+- Motion is progressive enhancement over complete static HTML, implemented without an animation dependency.
+- The inspection spine communicates document progress on larger screens; hiding it on mobile is an art-direction decision rather than a missing feature.
+- Section reveals run once and then disconnect, using transform and opacity only.
+- Reduced-motion preference wins over every decorative transition, including smooth anchor scrolling.

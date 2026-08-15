@@ -15,6 +15,7 @@
   --page-padding: clamp(1.25rem, 4vw, 4.5rem);
   --section-space: clamp(5.5rem, 12vw, 11rem);
   --hairline: color-mix(in srgb, var(--color-graphite) 20%, transparent);
+  --page-progress: 0;
 }
 
 *,
@@ -46,6 +47,26 @@ a:focus-visible {
   border-radius: 0.15rem;
   outline: 0.2rem solid var(--color-cobalt);
   outline-offset: 0.25rem;
+}
+
+.inspection-spine {
+  position: fixed;
+  z-index: 20;
+  top: 7rem;
+  bottom: 2rem;
+  left: 1rem;
+  width: 1px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--color-graphite) 14%, transparent);
+  pointer-events: none;
+}
+
+.inspection-spine span {
+  position: absolute;
+  inset: 0;
+  background: var(--color-cobalt);
+  transform: scaleY(var(--page-progress));
+  transform-origin: top;
 }
 
 p,
@@ -127,6 +148,26 @@ nav ul {
 
 nav a {
   text-decoration: none;
+}
+
+nav a,
+.hero-actions a,
+.project-links a,
+.site-footer > a {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
+}
+
+nav a:hover,
+.project-links a:hover,
+.site-footer > a:hover {
+  color: var(--color-cobalt);
+}
+
+.primary-action:hover {
+  background: var(--color-graphite);
+  color: var(--color-ivory);
 }
 
 .hero {
@@ -648,6 +689,9 @@ h3 {
 }
 
 @media (max-width: 44rem) {
+  .inspection-spine {
+    display: none;
+  }
   .site-header {
     align-items: flex-start;
     flex-direction: column;
@@ -730,5 +774,30 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .motion-ready .reveal {
+    opacity: 0;
+    transform: translateY(1.2rem);
+    transition:
+      opacity 620ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: calc(var(--reveal-order, 0) * 45ms);
+  }
+
+  .motion-ready .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

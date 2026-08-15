@@ -84,12 +84,23 @@ Verified at completion:
 
 ## Phase 5 — Motion and interaction
 
+**Status: complete on 2026-08-15 (motion-layer commit follows Phase 4).**
+
 - Implement the hero resolution and inspection-spine behavior with minimal JavaScript.
 - Add controlled case-study reveals and precise hover/focus/active states.
 - Implement a complete reduced-motion mode with no missing or hidden content.
 - Test touch behavior and prevent geometry-changing hover effects.
 
 **Gate:** motion communicates system investigation, stays smooth on a mid-range mobile viewport, and never blocks navigation or reading.
+
+Verified at completion:
+
+- one dependency-free inline script progressively enhances the static document with intersection-based reveals and a requestAnimationFrame-throttled inspection-spine signal;
+- the spine records reading progress on larger screens and is removed from the mobile composition;
+- reveal transitions use only opacity and transform, unobserve settled elements, and do not change layout geometry;
+- all content remains present in the generated HTML and visible when JavaScript is unavailable;
+- the complete reduced-motion stylesheet removes smooth scrolling and effectively disables transitions and animations;
+- local browser QA confirms reveal activation, progress updates, complete mobile hero visibility, no overflow, and stable navigation at 390 and desktop widths.
 
 ## Phase 6 — Quality engineering
 
