@@ -13,7 +13,7 @@ export const site = {
   description:
     'QA Automation Engineer who builds test systems across web, mobile, APIs, performance, and ML-driven products. I ship products too.',
   socialLinks: [
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mrskyray/' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/anmou/' },
     { label: 'GitHub', href: 'https://github.com/AndrewMois' }
   ],
   navigation: [
