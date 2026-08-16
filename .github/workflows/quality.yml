@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - master
-      - codex/astro-rebuild
+      - 'codex/**'
 
 jobs:
   verify:
