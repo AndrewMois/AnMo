@@ -48,7 +48,7 @@ describe('portfolio content', () => {
 
   it('publishes the approved live products without source links', () => {
     expect(content.products.map((product) => product.href)).toEqual([
-      'https://young-mystic.com',
+      'https://app.young-mystic.com/login',
       'https://anna-home-five.vercel.app',
       'https://alexhealing.com'
     ]);

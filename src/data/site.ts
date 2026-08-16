@@ -9,9 +9,9 @@ export const site = {
   email: 'amoiseyenko@ukr.net',
   resumeUrl: '/resume/Andriy-Moiseyenko-Resume.pdf',
   url: 'https://anmo.dev',
-  title: 'Andriy Moiseyenko — QA Automation Engineer',
+  title: 'Andriy Moiseyenko | QA Automation Engineer',
   description:
-    'QA Automation Engineer who builds test systems across web, mobile, APIs, performance, and ML-driven products — and ships products too.',
+    'QA Automation Engineer who builds test systems across web, mobile, APIs, performance, and ML-driven products. I ship products too.',
   socialLinks: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mrskyray/' },
     { label: 'GitHub', href: 'https://github.com/AndrewMois' }

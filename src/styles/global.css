@@ -277,18 +277,6 @@ nav a:hover,
   isolation: isolate;
 }
 
-.hero-portrait::after {
-  position: absolute;
-  z-index: 2;
-  right: -0.4rem;
-  bottom: 1.4rem;
-  width: 42%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-cobalt), var(--color-gold));
-  content: '';
-  transform: rotate(-8deg);
-}
-
 .hero-portrait picture {
   position: absolute;
   inset: 0;
@@ -309,9 +297,11 @@ nav a:hover,
 .portrait-halo {
   position: absolute;
   z-index: -1;
-  inset: 7% 0 -4% 5%;
-  border: 1px solid color-mix(in srgb, var(--color-gold) 55%, transparent);
+  inset: 3% -3% -2% 1%;
+  background: linear-gradient(135deg, rgb(36 87 197 / 48%), rgb(215 182 110 / 58%));
   clip-path: polygon(8% 8%, 96% 0, 100% 87%, 69% 96%, 0 100%, 4% 19%);
+  filter: blur(1.25rem);
+  opacity: 0.72;
 }
 
 .hero-easter-egg {
@@ -325,6 +315,31 @@ nav a:hover,
 .practice {
   padding-block: clamp(4.5rem, 8vw, 7rem);
   border-top: 1px solid var(--hairline);
+}
+
+.chapter-divider {
+  position: relative;
+  height: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.chapter-divider::before,
+.chapter-divider span {
+  position: absolute;
+  left: var(--page-padding);
+  right: var(--page-padding);
+  height: 1px;
+  content: '';
+}
+
+.chapter-divider::before {
+  top: calc(50% - 3px);
+  background: linear-gradient(90deg, var(--color-cobalt), var(--color-gold), transparent 92%);
+}
+
+.chapter-divider span {
+  top: calc(50% + 3px);
+  background: linear-gradient(90deg, transparent 8%, var(--color-gold), var(--color-cobalt));
+  opacity: 0.48;
 }
 
 .section-heading {
@@ -379,7 +394,7 @@ nav a:hover,
   grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1.65fr);
   gap: 2rem;
   align-items: start;
-  padding-block: var(--section-space) clamp(3rem, 5vw, 5rem);
+  padding-block: clamp(3.5rem, 6vw, 5.5rem) clamp(3rem, 5vw, 5rem);
 }
 
 .work-heading h2 {
@@ -552,7 +567,7 @@ nav a:hover,
 }
 
 .products {
-  padding-block: var(--section-space);
+  padding-block: clamp(3.5rem, 6vw, 5.5rem) var(--section-space);
 }
 
 .products-heading {
@@ -560,6 +575,15 @@ nav a:hover,
   grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1.65fr);
   gap: 2rem;
   padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.products-heading .eyebrow {
+  color: var(--color-cobalt);
+  font-family: var(--font-sans);
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-weight: 720;
+  letter-spacing: -0.02em;
+  text-transform: none;
 }
 
 .products-heading h2 {
@@ -653,8 +677,7 @@ nav a:hover,
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.75fr);
   gap: clamp(3rem, 8vw, 8rem);
-  padding-block: var(--section-space);
-  border-top: 1px solid var(--hairline);
+  padding-block: clamp(3.5rem, 6vw, 5.5rem) var(--section-space);
 }
 
 .about h2 {

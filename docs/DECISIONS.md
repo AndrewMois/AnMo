@@ -104,5 +104,12 @@
 - The supplied portrait moves into an irregular hero crop without modifying the source or generating a replacement identity.
 - BluWave AI uses an original forecast/energy trace instead of an employer logo; CRA uses a restrained Canadian identifier without imitating a government page.
 - The separate methodology section is removed. Professional evidence is limited to three proof points per case, and the practical stack is placed immediately after the hero.
+
+## 2026-08-16 — Section rhythm polish
+
+- The portrait keeps its irregular crop, but stray line ornaments are replaced by one soft cobalt-to-gold halo behind the photograph.
+- Double gradient rules separate practical tools, professional work, owned products, and the personal close.
+- Young Mystic links directly to `https://app.young-mystic.com/login`.
+- Published copy avoids em dashes and uses natural sentence structure instead.
 - Product CTAs are live-only. GitHub remains available only at the profile level in the footer.
 - This candidate was implemented and tested without a manual visual pass at Andriy's request. It is not approved for production until he reviews it.

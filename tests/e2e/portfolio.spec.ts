@@ -7,7 +7,7 @@ test.describe('portfolio experience', () => {
   test('renders the complete professional narrative and resolves navigation', async ({ page }) => {
     await page.goto('/');
 
-    await expect(page).toHaveTitle('Andriy Moiseyenko — QA Automation Engineer');
+    await expect(page).toHaveTitle('Andriy Moiseyenko | QA Automation Engineer');
     await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
       'content',
       'https://anmo.dev/social-card.png'
@@ -44,7 +44,7 @@ test.describe('portfolio experience', () => {
     }
 
     await expect(page.getByText('View source')).toHaveCount(0);
-    await expect(page.locator('a[href="https://young-mystic.com"]')).toHaveCount(1);
+    await expect(page.locator('a[href="https://app.young-mystic.com/login"]')).toHaveCount(1);
     await expect(page.locator('a[href="https://anna-home-five.vercel.app"]')).toHaveCount(1);
     await expect(page.locator('a[href="https://alexhealing.com"]')).toHaveCount(1);
   });

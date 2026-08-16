@@ -30,7 +30,7 @@ export const content = {
     title: 'I know where systems break.',
     titleContinuation: 'I build them too.',
     summary:
-      'I build test systems for web, mobile, APIs, performance, and ML-driven products — then trace failures past the first convenient answer.',
+      'I build test systems for web, mobile, APIs, performance, and ML-driven products. Then I trace failures past the first convenient answer.',
     primaryAction: 'See the work',
     secondaryAction: 'Talk to me',
     easterEgg: 'Yes, I tested this site.'
@@ -68,7 +68,7 @@ export const content = {
       organization: 'BluWave AI',
       headline: "I didn't inherit one test stack. I built several.",
       introduction:
-        'At BluWave AI, a lean QA team covers web, iOS, Android, APIs, backend services, data flows, and ML forecasts. My job is to make that surface testable — and the failures explainable.',
+        'At BluWave AI, a lean QA team covers web, iOS, Android, APIs, backend services, data flows, and ML forecasts. My job is to make that surface testable and the failures explainable.',
       proof: [
         'Built dedicated frameworks for UI/mobile, REST and SOAP APIs, plus performance, load, and soak testing.',
         'Put the suites into Dockerized Jenkins pipelines with clean reports and Jira/Xray publishing.',
@@ -104,13 +104,13 @@ export const content = {
       title: 'Young Mystic',
       kicker: 'Built for 200+ people. Owned end to end.',
       description:
-        'A multilingual essential-oil library that grew into a real product — with accounts, structured content, mobile UX, and carefully bounded offline behaviour.',
+        'A multilingual essential-oil library that grew into a real product, with accounts, structured content, mobile UX, and carefully bounded offline behaviour.',
       proof: [
         'SvelteKit · MongoDB · Sanity',
         'Authentication · PWA',
         'Architecture · UX · long-term ownership'
       ],
-      href: 'https://young-mystic.com'
+      href: 'https://app.young-mystic.com/login'
     },
     {
       id: 'guided-by-scent',
