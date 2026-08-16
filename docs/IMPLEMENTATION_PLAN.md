@@ -154,3 +154,16 @@ Verified at completion:
 - the hosted browser suite passes the same nine Chromium scenarios used locally, including mobile overflow, reduced motion, no-JavaScript reading, navigation, contact paths, and automated accessibility checks;
 - Andriy will perform the creative visual review on the live site and provide a separate correction list;
 - the old template remains recoverable through the `archive/pre-astro-template` tag.
+
+## Phase 9 — Human-first polish
+
+**Status: planning. The current authority covers analysis and documentation only; no site implementation has begun.**
+
+- Complete the content cut and three hero-copy directions described in `docs/POLISH_BRIEF.md`.
+- Approve the revised voice, factual emphasis, and target page length.
+- Prototype the portrait-led hero and one shortened BluWave AI episode.
+- Approve the visual direction before applying it to the remaining page.
+- Implement the shorter architecture, move capabilities upward, differentiate the cases, and replace source links with live projects.
+- Re-run local and hosted quality gates before any production release.
+
+**Gate:** explicit approval of the text-only direction, then explicit approval of the hero/case prototype. Analysis does not authorize production changes.

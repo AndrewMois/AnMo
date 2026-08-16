@@ -86,3 +86,14 @@
 - Static Astro output needs no Netlify adapter. Repository-owned `netlify.toml` and `.node-version` define Node 22.12, `npm run build`, and `dist` so the build is reproducible outside old dashboard defaults.
 - The first production attempt failed under the inherited Netlify environment and left the old release intact. Commit `b0121e0` corrected the build configuration and reached `ready` before hosted verification began.
 - No analytics are included in the launch release. Adding analytics remains a separate privacy decision.
+
+## 2026-08-15 — Post-launch polish direction
+
+- The first revision round is analysis-only until Andriy approves a shorter copy architecture and a new hero direction.
+- The site should shift from institutional `quiet authority` toward human authority: direct, factual, alive, occasionally witty, and still precise.
+- Andriy's portrait moves into the hero to establish immediate personal connection; the original source remains untouched.
+- The practical capability range moves near the top of the page and receives a plain-English title.
+- Repeated `Context / Response / Demonstrates` case structures will be shortened and visually differentiated rather than merely restyled.
+- Public product calls to action use live sites, never `View source`: Young Mystic at `https://young-mystic.com`, Guided by Scent at `https://anna-home-five.vercel.app`, and Alex Healing at `https://alexhealing.com`.
+- GitHub remains a profile-level footer link, not the primary proof for finished products.
+- The inspection spine remains. Gold/cobalt energy, grain, light, or wave treatments may be explored with restraint; generic glitter and luxury clichés remain excluded.

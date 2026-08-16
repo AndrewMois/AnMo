@@ -13,7 +13,8 @@ Read these before implementation:
 3. `docs/DESIGN_STRATEGY.md`
 4. `docs/CONTENT_STRATEGY.md`
 5. `docs/DECISIONS.md`
-6. `docs/IMPLEMENTATION_PLAN.md`
+6. `docs/POLISH_BRIEF.md`
+7. `docs/IMPLEMENTATION_PLAN.md`
 
 ## Current state
 
