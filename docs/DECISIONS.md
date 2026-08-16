@@ -97,3 +97,12 @@
 - Public product calls to action use live sites, never `View source`: Young Mystic at `https://young-mystic.com`, Guided by Scent at `https://anna-home-five.vercel.app`, and Alex Healing at `https://alexhealing.com`.
 - GitHub remains a profile-level footer link, not the primary proof for finished products.
 - The inspection spine remains. Gold/cobalt energy, grain, light, or wave treatments may be explored with restraint; generic glitter and luxury clichés remain excluded.
+
+## 2026-08-16 — Human-first candidate
+
+- The selected candidate hero says `I know where systems break. I build them too.` and uses `Yes, I tested this site.` as its easter egg.
+- The supplied portrait moves into an irregular hero crop without modifying the source or generating a replacement identity.
+- BluWave AI uses an original forecast/energy trace instead of an employer logo; CRA uses a restrained Canadian identifier without imitating a government page.
+- The separate methodology section is removed. Professional evidence is limited to three proof points per case, and the practical stack is placed immediately after the hero.
+- Product CTAs are live-only. GitHub remains available only at the profile level in the footer.
+- This candidate was implemented and tested without a manual visual pass at Andriy's request. It is not approved for production until he reviews it.

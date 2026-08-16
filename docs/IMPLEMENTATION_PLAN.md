@@ -157,7 +157,7 @@ Verified at completion:
 
 ## Phase 9 — Human-first polish
 
-**Status: planning. The current authority covers analysis and documentation only; no site implementation has begun.**
+**Status: review candidate complete on 2026-08-16 (`eb4bc41` plus the following quality/documentation commit). Production remains unchanged.**
 
 - Complete the content cut and three hero-copy directions described in `docs/POLISH_BRIEF.md`.
 - Approve the revised voice, factual emphasis, and target page length.
@@ -167,3 +167,17 @@ Verified at completion:
 - Re-run local and hosted quality gates before any production release.
 
 **Gate:** explicit approval of the text-only direction, then explicit approval of the hero/case prototype. Analysis does not authorize production changes.
+
+Implemented in the candidate:
+
+- the hero now introduces Andriy through an immediate portrait, the line `I know where systems break. I build them too.`, and a small personal easter egg;
+- the practical stack moves directly below the hero in four compact groups;
+- the abstract quality-approach chapter and late portrait episode are removed;
+- BluWave AI and CRA become shorter, distinct professional episodes with three proof points each;
+- Young Mystic, Guided by Scent, and Alex Healing become one live-product chapter with no public source-code CTAs;
+- generated HTML falls from `19,095 B` to approximately `13.3 KB`, while the client script falls from `2,113 B` to approximately `1.85 KB`;
+- formatting, Astro diagnostics, eight unit tests, build/link budgets, nine Chromium scenarios, mobile overflow checks, reduced motion, no-JavaScript reading, and automated accessibility checks pass;
+- all three public product destinations return HTTP `200` on 2026-08-16;
+- no manual visual review or screenshot inspection was performed, following Andriy's explicit instruction.
+
+**Next gate:** Andriy's visual and copy review of the candidate. Merge to `master` and production deployment remain separate decisions.

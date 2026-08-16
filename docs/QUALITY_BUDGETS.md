@@ -4,14 +4,14 @@ These budgets protect the portfolio's defining qualities: immediate reading, cal
 
 ## Automated build budgets
 
-| Budget                                           |                         Limit | Current Phase 6 result |
-| ------------------------------------------------ | ----------------------------: | ---------------------: |
-| Generated HTML, including critical CSS           |                       `25 KB` |              `18.5 KB` |
-| Client scripts                                   |     `1` inline script maximum |                    `1` |
-| Client JavaScript                                | `3.5 KB` uncompressed maximum |               `2.1 KB` |
-| All responsive portrait derivatives in the build |              `1.2 MB` maximum |              `1.12 MB` |
-| Serious or critical axe violations               |                           `0` |                    `0` |
-| Page-level horizontal overflow at target widths  |                        `0 px` |                 `0 px` |
+| Budget                                           |                         Limit | Current candidate result |
+| ------------------------------------------------ | ----------------------------: | -----------------------: |
+| Generated HTML, including critical CSS           |                       `25 KB` |                `13.0 KB` |
+| Client scripts                                   |     `1` inline script maximum |                      `1` |
+| Client JavaScript                                | `3.5 KB` uncompressed maximum |                 `1.8 KB` |
+| All responsive portrait derivatives in the build |              `1.2 MB` maximum |                `1.12 MB` |
+| Serious or critical axe violations               |                           `0` |                      `0` |
+| Page-level horizontal overflow at target widths  |                        `0 px` |                   `0 px` |
 
 The repository enforces these limits with `npm run test:links` and `npm run test:e2e`.
 

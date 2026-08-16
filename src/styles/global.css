@@ -183,6 +183,7 @@ nav a:hover,
 
 .hero {
   position: relative;
+  overflow: clip;
   width: min(100%, calc(var(--content-width) + 2 * var(--page-padding)));
   min-height: min(54rem, calc(100svh - 6rem));
   display: grid;
@@ -196,7 +197,7 @@ nav a:hover,
 .hero::before {
   position: absolute;
   top: 15%;
-  right: -8%;
+  right: 0;
   width: min(38rem, 50vw);
   aspect-ratio: 1;
   border-radius: 50%;
@@ -308,7 +309,7 @@ nav a:hover,
 .portrait-halo {
   position: absolute;
   z-index: -1;
-  inset: 7% -8% -4% 5%;
+  inset: 7% 0 -4% 5%;
   border: 1px solid color-mix(in srgb, var(--color-gold) 55%, transparent);
   clip-path: polygon(8% 8%, 96% 0, 100% 87%, 69% 96%, 0 100%, 4% 19%);
 }
@@ -435,9 +436,9 @@ nav a:hover,
 .energy-trace {
   position: absolute;
   z-index: -1;
-  right: -4rem;
+  right: 0;
   bottom: 13%;
-  width: min(58rem, 72vw);
+  width: min(58rem, 100%);
   opacity: 0.55;
   pointer-events: none;
 }
@@ -820,8 +821,8 @@ nav a:hover,
   }
 
   .energy-trace {
-    right: -15rem;
-    width: 56rem;
+    right: 0;
+    width: 100%;
   }
 
   .product-grid {

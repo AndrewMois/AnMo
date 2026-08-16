@@ -1,6 +1,6 @@
 # Post-launch polish brief
 
-**Status:** analysis only. No visual or production changes are authorized by this document.
+**Status:** implemented as a review candidate on `codex/human-first-polish-plan` on 2026-08-16. No production change is authorized by this document.
 
 This brief distils Andriy's first live-site review on 2026-08-15. It is the source of truth for the next revision round and should be updated as further spoken feedback arrives.
 
@@ -221,13 +221,14 @@ The separate four-step “quality approach” section is a candidate for removal
 - Preserve accessibility, reduced motion, performance budgets, and no-JavaScript reading.
 - Run local and hosted automated checks before a production push.
 
-## Decisions still needed
+## Candidate implementation choices
 
-- Final hero line and how provocative it should be.
-- Final easter egg.
-- Whether the hero portrait is a photographic crop, a clean cutout, or a hybrid material treatment.
-- Whether BluWave AI uses the official public logo as a small identifier or only an original energy/data motif.
-- Whether the four-step quality approach disappears entirely or survives as a very short point-of-view fragment.
-- Which live screenshots best represent Young Mystic, Guided by Scent, and Alex Healing.
+- Hero line: `I know where systems break. I build them too.`
+- Easter egg: `Yes, I tested this site.`
+- The existing responsive portrait derivatives move into the hero inside an irregular photographic crop; the source remains unchanged.
+- BluWave AI uses an original energy/forecast trace rather than an employer logo.
+- The separate four-step quality approach is removed; the cases now carry its useful ideas.
+- Live screenshots are deferred. The product chapter uses authored material cues and direct live links, keeping this revision fast and avoiding unreviewed external imagery.
+- The user explicitly requested no manual visual pass during implementation. Visual approval remains Andriy's review stage.
 
-Until these are approved, the next action is continued analysis and copy exploration, not implementation.
+These choices are a coherent candidate, not locked creative decisions. Andriy's live-site feedback can revise any of them before production.
