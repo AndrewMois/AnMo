@@ -11,14 +11,14 @@ export const site = {
   url: 'https://anmo.dev',
   title: 'Andriy Moiseyenko — QA Automation Engineer',
   description:
-    'QA Automation Engineer building quality systems across interfaces, APIs, backend services, performance, and AI-driven products.',
+    'QA Automation Engineer who builds test systems across web, mobile, APIs, performance, and ML-driven products — and ships products too.',
   socialLinks: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mrskyray/' },
     { label: 'GitHub', href: 'https://github.com/AndrewMois' }
   ],
   navigation: [
-    { label: 'Approach', href: '#approach' },
-    { label: 'Selected work', href: '#work' },
+    { label: 'Work', href: '#work' },
+    { label: 'Products', href: '#products' },
     { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' }
   ] satisfies NavigationItem[]

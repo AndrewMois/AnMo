@@ -50,9 +50,7 @@ const socialImageUrl = new URL('/social-card.png', Astro.site);
 
         const startMotion = () => {
           const root = document.documentElement;
-          const targets = document.querySelectorAll(
-            '.hero-copy > *, .proof li, .section-introduction > *, .approach-steps li, .case-header, .case-lede > *, .case-body > *, .case-evidence, .perspective > *, .build-list article, .capability-list article, .portrait-episode, .about > *, .site-footer > *'
-          );
+          const targets = document.querySelectorAll('[data-reveal]');
 
           root.classList.add('motion-ready');
           targets.forEach((target, index) => {

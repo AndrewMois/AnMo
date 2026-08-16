@@ -1,6 +1,8 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
+const testBaseUrl = process.env.PLAYWRIGHT_BASE_URL ?? 'http://127.0.0.1:4321';
+
 test.describe('portfolio experience', () => {
   test('renders the complete professional narrative and resolves navigation', async ({ page }) => {
     await page.goto('/');
@@ -10,10 +12,14 @@ test.describe('portfolio experience', () => {
       'content',
       'https://anmo.dev/social-card.png'
     );
-    await expect(page.getByRole('heading', { level: 1 })).toContainText('QA Automation Engineer');
-    await expect(page.locator('.case-study')).toHaveCount(3);
+    await expect(page.getByText('QA Automation Engineer · Ottawa')).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1 })).toContainText(
+      'I know where systems break.'
+    );
+    await expect(page.locator('.case-study')).toHaveCount(2);
+    await expect(page.locator('.product-card')).toHaveCount(3);
 
-    for (const href of ['#approach', '#work', '#about', '#contact']) {
+    for (const href of ['#work', '#products', '#about', '#contact']) {
       await expect(page.locator(`a[href="${href}"]`).first()).toBeVisible();
       await expect(page.locator(href)).toHaveCount(1);
     }
@@ -29,13 +35,18 @@ test.describe('portfolio experience', () => {
     await expect(page.locator('a[href="/resume/Andriy-Moiseyenko-Resume.pdf"]')).toHaveCount(2);
 
     const externalLinks = page.locator('a[target="_blank"]');
-    await expect(externalLinks).toHaveCount(6);
+    await expect(externalLinks).toHaveCount(5);
 
     for (let index = 0; index < (await externalLinks.count()); index += 1) {
       const link = externalLinks.nth(index);
       await expect(link).toHaveAttribute('href', /^https:\/\//);
       await expect(link).toHaveAttribute('rel', /noreferrer/);
     }
+
+    await expect(page.getByText('View source')).toHaveCount(0);
+    await expect(page.locator('a[href="https://young-mystic.com"]')).toHaveCount(1);
+    await expect(page.locator('a[href="https://anna-home-five.vercel.app"]')).toHaveCount(1);
+    await expect(page.locator('a[href="https://alexhealing.com"]')).toHaveCount(1);
   });
 
   test('has no serious or critical automated accessibility violations', async ({ page }) => {
@@ -77,11 +88,12 @@ test.describe('portfolio experience', () => {
 test('keeps the full narrative readable without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
-  await page.goto('http://127.0.0.1:4321');
+  await page.goto(testBaseUrl);
 
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-  await expect(page.locator('.case-study')).toHaveCount(3);
-  await expect(page.getByText('Precision is a form of responsibility.')).toBeVisible();
+  await expect(page.locator('.case-study')).toHaveCount(2);
+  await expect(page.locator('.product-card')).toHaveCount(3);
+  await expect(page.getByText('Curious by default. Precise on purpose.')).toBeVisible();
 
   await context.close();
 });
