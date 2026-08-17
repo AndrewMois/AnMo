@@ -7,7 +7,7 @@ test.describe('portfolio experience', () => {
   test('renders the complete professional narrative and resolves navigation', async ({ page }) => {
     await page.goto('/');
 
-    await expect(page).toHaveTitle('Andriy Moiseyenko | QA Automation Engineer');
+    await expect(page).toHaveTitle('Andriy Moiseyenko | QA Automation Engineer in Ottawa');
     await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
       'content',
       'https://anmo.dev/social-card.png'

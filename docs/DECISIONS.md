@@ -32,6 +32,8 @@
 - Search metadata uses the public name, `QA Automation Engineer`, Ottawa, and the confirmed quality-engineering scope in natural language.
 - The obsolete `/assets/resume.pdf` search result permanently redirects to the canonical homepage.
 - The current downloadable resume remains available to visitors but sends `X-Robots-Tag: noindex, noarchive` so it does not compete with the homepage in search results.
+- The Playwright title assertion must track the approved SEO title exactly so metadata changes cannot leave CI red while production is healthy.
+- GitHub Actions uses the current official major releases for checkout and Node setup to avoid deprecated action runtimes.
 
 ## 2026-08-15 — Phase 1 foundation
 
