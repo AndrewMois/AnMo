@@ -25,6 +25,14 @@
 - Whether Guided by Scent will expose a live URL once its configured domain resolves.
 - Analytics choice: none, privacy-friendly, or an explicitly consented solution.
 
+## 2026-08-16 — Search indexing foundation
+
+- The canonical homepage is explicitly discoverable through `/robots.txt` and `/sitemap.xml`.
+- The page exposes `ProfilePage`, `Person`, and `WebSite` structured data linking Andriy's approved name, role, Ottawa location, portrait, LinkedIn, and GitHub identity.
+- Search metadata uses the public name, `QA Automation Engineer`, Ottawa, and the confirmed quality-engineering scope in natural language.
+- The obsolete `/assets/resume.pdf` search result permanently redirects to the canonical homepage.
+- The current downloadable resume remains available to visitors but sends `X-Robots-Tag: noindex, noarchive` so it does not compete with the homepage in search results.
+
 ## 2026-08-15 — Phase 1 foundation
 
 - Astro 7.2 and TypeScript 6 are pinned through the manifest and lockfile.

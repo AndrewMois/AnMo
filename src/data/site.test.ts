@@ -8,6 +8,10 @@ describe('site identity', () => {
     expect(site.email).toBe('amoiseyenko@ukr.net');
     expect(site.resumeUrl).toBe('/resume/Andriy-Moiseyenko-Resume.pdf');
     expect(site.url).toBe('https://anmo.dev');
+    expect(site.title).toContain(site.name);
+    expect(site.title).toContain(site.role);
+    expect(site.description).toContain(site.name);
+    expect(site.description).toContain('Ottawa');
   });
 
   it('keeps navigation anchors unique and locally resolvable', () => {

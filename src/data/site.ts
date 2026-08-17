@@ -9,9 +9,9 @@ export const site = {
   email: 'amoiseyenko@ukr.net',
   resumeUrl: '/resume/Andriy-Moiseyenko-Resume.pdf',
   url: 'https://anmo.dev',
-  title: 'Andriy Moiseyenko | QA Automation Engineer',
+  title: 'Andriy Moiseyenko | QA Automation Engineer in Ottawa',
   description:
-    'QA Automation Engineer who builds test systems across web, mobile, APIs, performance, and ML-driven products. I ship products too.',
+    'Andriy Moiseyenko is a QA Automation Engineer in Ottawa, Canada, building test automation across web, mobile, APIs, performance, CI/CD, and AI systems.',
   socialLinks: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/anmou/' },
     { label: 'GitHub', href: 'https://github.com/AndrewMois' }

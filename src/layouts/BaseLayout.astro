@@ -10,24 +10,82 @@ type Props = {
 const { title = site.title, description = site.description } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const socialImageUrl = new URL('/social-card.png', Astro.site);
+const profileId = new URL('/#andriy-moiseyenko', Astro.site);
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${site.url}/#website`,
+      url: site.url,
+      name: site.name,
+      description,
+      inLanguage: 'en-CA'
+    },
+    {
+      '@type': 'ProfilePage',
+      '@id': `${site.url}/#profile`,
+      url: site.url,
+      name: title,
+      description,
+      inLanguage: 'en-CA',
+      isPartOf: { '@id': `${site.url}/#website` },
+      mainEntity: {
+        '@type': 'Person',
+        '@id': profileId.href,
+        name: site.name,
+        url: site.url,
+        image: new URL('/images/andriy-portrait-1920.jpg', Astro.site).href,
+        jobTitle: site.role,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Ottawa',
+          addressRegion: 'Ontario',
+          addressCountry: 'CA'
+        },
+        sameAs: site.socialLinks.map((link) => link.href),
+        knowsAbout: [
+          'Quality assurance',
+          'Test automation',
+          'Web testing',
+          'Mobile application testing',
+          'API testing',
+          'Performance testing',
+          'CI/CD',
+          'AI system validation'
+        ]
+      }
+    }
+  ]
+};
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en-CA">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#f5f0e7" />
     <meta name="description" content={description} />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="author" content={site.name} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" href="/sitemap.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {site.socialLinks.map((link) => <link rel="me" href={link.href} />)}
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="profile" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content="en_CA" />
+    <meta property="profile:first_name" content="Andriy" />
+    <meta property="profile:last_name" content="Moiseyenko" />
     <meta property="og:image" content={socialImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -38,6 +96,8 @@ const socialImageUrl = new URL('/social-card.png', Astro.site);
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImageUrl} />
     <meta name="twitter:image:alt" content={`${site.name}, ${site.role}`} />
+
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
     <title>{title}</title>
   </head>

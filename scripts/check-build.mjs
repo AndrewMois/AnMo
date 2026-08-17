@@ -5,6 +5,8 @@ const root = process.cwd();
 const dist = path.join(root, 'dist');
 const htmlPath = path.join(dist, 'index.html');
 const html = await readFile(htmlPath, 'utf8');
+const robots = await readFile(path.join(dist, 'robots.txt'), 'utf8');
+const sitemap = await readFile(path.join(dist, 'sitemap.xml'), 'utf8');
 const failures = [];
 
 const assert = (condition, message) => {
@@ -16,6 +18,14 @@ const hrefs = [...html.matchAll(/\shref="([^"]+)"/g)].map((match) => match[1]);
 const sources = [...html.matchAll(/\s(?:src|srcset)="([^"]+)"/g)]
   .flatMap((match) => match[1].split(','))
   .map((source) => source.trim().split(/\s+/)[0]);
+
+assert(html.includes('<link rel="canonical" href="https://anmo.dev/">'), 'Missing canonical URL');
+assert(html.includes('name="robots" content="index, follow,'), 'Missing indexable robots meta');
+assert(html.includes('type="application/ld+json"'), 'Missing structured profile data');
+assert(html.includes('"@type":"ProfilePage"'), 'Missing ProfilePage structured data');
+assert(robots.includes('User-agent: *\nAllow: /'), 'robots.txt does not allow crawling');
+assert(robots.includes('Sitemap: https://anmo.dev/sitemap.xml'), 'robots.txt lacks sitemap URL');
+assert(sitemap.includes('<loc>https://anmo.dev/</loc>'), 'Sitemap lacks canonical homepage');
 
 for (const href of hrefs) {
   if (href.startsWith('#')) assert(ids.has(href.slice(1)), `Missing anchor target: ${href}`);
@@ -48,9 +58,11 @@ const imageBytes = (
 ).reduce((total, size) => total + size, 0);
 assert(imageBytes <= 1_200_000, `Image budget exceeded: ${imageBytes} > 1200000 bytes`);
 
-const scripts = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)];
+const scripts = [...html.matchAll(/<script(\s[^>]*)?>([\s\S]*?)<\/script>/g)].filter(
+  (match) => !/type="application\/ld\+json"/.test(match[1] ?? '')
+);
 assert(scripts.length <= 1, `Client script count exceeded: ${scripts.length} > 1`);
-const scriptBytes = scripts.reduce((total, match) => total + Buffer.byteLength(match[1]), 0);
+const scriptBytes = scripts.reduce((total, match) => total + Buffer.byteLength(match[2]), 0);
 assert(scriptBytes <= 3_500, `Client script budget exceeded: ${scriptBytes} > 3500 bytes`);
 
 if (failures.length > 0) {

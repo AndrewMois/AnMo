@@ -5,3 +5,14 @@
 [build.environment]
   NODE_VERSION = "22.12.0"
   ASTRO_TELEMETRY_DISABLED = "1"
+
+[[redirects]]
+  from = "/assets/resume.pdf"
+  to = "/"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/resume/Andriy-Moiseyenko-Resume.pdf"
+  [headers.values]
+    X-Robots-Tag = "noindex, noarchive"
